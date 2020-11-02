@@ -1,56 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Encuesta</title>
-</head>
-<body>
-    <h1 id="title">Consulta de opinión</h1>
-    <p id="description">Deseamos conocer tu opinión sobre lo que te interesa.</p>
-    <form id="survey-form" action="">
-        <label for="name" id="name-label"> Nombre:
-        <input type="text" id="name" placeholder="Ingresa tu nombre">
-        </label>
-        <label for="email" id="name-email"> Correo electrónico:
-        <input type="email" id="email" placeholder="Ingresa tu correo electrónico">
-        </label>
-        <label for="number" id="number-label"> Número de teléfono:
-        <input type="number" id="number" placeholder="Ingresa tu número de teléfono" min="1111111111" max="9999999999">
-        </label>
-        <label for=""> Color preferido:
-        <select name="" id="dropdown">
-            <option value="">Azul</option>
-            <option value="">Verde</option>
-            <option value="">Violeta</option>
-            <option value="">Amarillo</option>
-            <option value="">Rojo</option>
-            <option value="">Negro</option>
-            <option value="">Blanco</option>
-            <option value="">Café</option>
-            <option value="">Otro</option>
-        </select>
-        </label>
-        <label for="radio"> Escoja su género literario preferido:
-            <input type="radio" value="" name="radio"> Ciencia ficción
-            <input type="radio" value="" name="radio"> Novela
-            <input type="radio" value="" name="radio"> Misterio
-            <input type="radio" value="" name="radio"> Historico
-            <input type="radio" value="" name="radio"> Cocina
-        </label>
-        <label for=""> Escoja su raza de perro preferida:
-            <input type="checkbox" name="" id="" value="labrador"> Labrador
-            <input type="checkbox" name="" id="" value="malamute"> Alaskan malamute
-            <input type="checkbox" name="" id="samoyedo"> Samoyedo
-            <input type="checkbox" name="" id="husky"> Husky siberiano
-            <input type="checkbox" name="" id="bulldog"> Bulldog
-            <input type="checkbox" name="" id="san-bernardo"> San bernardo
-            <input type="checkbox" name="" id="otra"> Otra
-        </label>
-        <label for=""> Comentarios:
-        <textarea name="" id="" placeholder="Escribe tus comentarios aquí"></textarea>
-        </label>
-        <button id="submit">Enviar</button>
-    </form>
-</body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario de Encuesta</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+    
+        <h1 id="title">Consulta de opinión</h1>
+        <p id="description">Deseamos conocer cuales son tus intereses.</p>
+        
+        <form id="survey-form" action="">
+            <label for="name" id="name-label"> Nombre:</label>
+            <input type="text" id="name" placeholder="Ingresa tu nombre" required>
+            <label for="email" id="email-label"> Correo electrónico:</label>
+            <input type="email" id="email" placeholder="Ingresa tu correo electrónico" required>
+            <label for="number" id="number-label"> Edad:</label>
+            <input type="number" id="number" placeholder="Ingresa tu edad" min="10" max="120" required>
+            <label for="dropdown"> Color preferido:</label>
+            <select id="dropdown">
+                <option value="">Selecciona el color</option>
+                <option value="">Azul</option>
+                <option value="">Verde</option>
+                <option value="">Violeta</option>
+                <option value="">Amarillo</option>
+                <option value="">Rojo</option>
+                <option value="">Negro</option>
+                <option value="">Blanco</option>
+                <option value="">Café</option>
+                <option value="">Otro</option>
+            </select>
+            <label for="radio"> [Sub]Género literario preferido:</label>
+                    <input type="radio" id="radio" value="satira" name="radio"> Sátira
+                    <br>
+                    <input type="radio" id="radio" value="romance" name="radio"> Romance
+                    <br>
+                    <input type="radio" id="radio" value="novela" name="radio"> Novela
+                    <br>
+                    <input type="radio" id="radio" value="fabula" name="radio"> Fábula
+                    <br>
+                    <input type="radio" id="radio" value="tragedia" name="radio"> Tragedia
+                    <br>
+                    <input type="radio" id="radio" value="comedia" name="radio"> Comedia
+                    <br>
+                    <input type="radio" id="radio" value="melodrama" name="radio"> Melodrama
+                    <br>
+                    <input type="radio" id="radio" value="otro" name="radio"> Otro
+            <label for="checkbox"> Raza de perro preferida:</label>
+                    <input type="checkbox" name="checkbox" id="checkbox" value="labrador"> Labrador retriever
+                    <br>
+                    <input type="checkbox" name="checkbox" id="checkbox" value="golden"> Golden retriever
+                    <br>
+                    <input type="checkbox" name="checkbox" id="checkbox" value="terranova"> Terranova
+                    <br>
+                    <input type="checkbox" name="checkbox" id="checkbox" value="malamute"> Alaskan malamute
+                    <br>
+                    <input type="checkbox" name="checkbox" id="checkbox" value="samoyedo"> Samoyedo
+                    <br>
+                    <input type="checkbox" name="checkbox" id="checkbox" value="husky"> Husky siberiano
+                    <br>
+                    <input type="checkbox" name="checkbox" id="checkbox" value="bulldog"> Bulldog
+                    <br>
+                    <input type="checkbox" name="checkbox" id="checkbox" value="bulldog"> Pug
+                    <br>
+                    <input type="checkbox" name="checkbox" id="checkbox" value="san-bernardo"> San bernardo
+                    <br>
+                    <input type="checkbox" name="checkbox" id="checkbox" value="otra"> Otra
+            <label for="textarea"> Comentarios:</label>
+            <textarea name="textarea" id="textarea" placeholder="Escribe tus comentarios aquí"></textarea>
+            <button id="submit">Enviar</button>
+        </form>
+
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+    </body>
 </html>
