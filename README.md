@@ -1,2 +1,2 @@
 # FCC-Survey-Form
-Survey form Free Code Camp exercise.
+Survey form Free Code Camp project.
